@@ -7,8 +7,8 @@ public class addTwoArray {
 
     public static void main(String[] args) {
 
-        int[] arr1 = {1};
-        int[] arr2={2};
+        int[] arr1 = {3,1};
+        int[] arr2={2,5};
 
         AddTwoArrays(arr1, arr2);
 

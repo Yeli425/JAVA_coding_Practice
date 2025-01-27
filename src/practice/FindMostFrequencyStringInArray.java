@@ -10,7 +10,7 @@ public class FindMostFrequencyStringInArray {
 
     public static void main(String[] args) {
 
-        String arr[] = {"elzat","james", "elzat","james", "james"};
+        String arr[] = {"elzat","james", "elzat","james", "james","kobe"};
         int n = arr.length;
         System.out.print(mostFrequentWord(arr, n));
 
@@ -35,11 +35,9 @@ public class FindMostFrequencyStringInArray {
                 freq.put(arr[i], +1);
 
             if (max <= freq.get(arr[i])) {
-
-                if (max < freq.get(arr[i])) {
                     max = freq.get(arr[i]);
                     result = arr[i];
-                }
+
             }
         }
 

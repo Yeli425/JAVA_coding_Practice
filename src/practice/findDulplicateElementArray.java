@@ -8,7 +8,7 @@ public class findDulplicateElementArray {
 
     public static void main(String[] args) {
 
-            dep(new int[]{1,2,3,1,2,3});
+        dep(new int[]{1,2,3,1,2,3});
 
 
 
