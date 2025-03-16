@@ -24,8 +24,6 @@ public class SortArrayWithoutSortMethod {
                 arr[minIndex] = temp;
             }
         }
-
-
 //        // Printing the sorted array
         System.out.println(Arrays.toString(arr));
         // Output: 1 2 3 5 8
