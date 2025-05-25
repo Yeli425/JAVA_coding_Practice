@@ -5,22 +5,41 @@ public class subsetOfThreeDigit {
 
     public static void main(String[] args) {
 
-        int arr[]= {-1,0,1,-1,2,3,-3};
 
-        int sum =0;
-
-        for (int i=0; i<arr.length; i++){
+        int[] n = {1, 0, 9, 10, 8, 2, 7};
+        int target = 9;
 
 
-            for (int j=i+1; j<arr.length; j++){
-
-                for (int k=j; k<arr.length; k++){
-
-                    if(arr[i]+arr[j]+arr[k]==sum){
+        findThreeDigit(n, target);
+    }
 
 
+    public static void findThreeDigit(int[] n, int target) {
 
-                        System.out.println(arr[i] +", "+ arr[j] +", "+ arr[k]);
+
+        for (int i = 0; i < n.length; i++) {
+
+
+            for (int j = i + 1; j < n.length; j++) {
+
+
+                for (int k = j; k < n.length; k++) {
+
+                    if (n[i] + n[j] + n[k] == target) {
+                        System.out.println(n[i] + " + " + n[j] + " + " + n[k] + " == " + target);
+                    } else if (n[j] - n[i] + n[k] == target) {
+                        System.out.println(n[j] + " - " + n[i] + " + " + n[k] + " == " + target);
+                    } else if (n[k] - n[j] + n[i] == target) {
+                        System.out.println(n[k] + " - " + n[j] + " + " + n[i] + " == " + target);
+                    } else if (n[k] - n[i] + n[j] == target) {
+                        System.out.println(n[k] + " - " + n[i] + " + " + n[j] + " == " + target);
+                    } else if (n[k] - n[i] - n[j] == target) {
+                        System.out.println(n[k] + " - " + n[i] + " + " + n[j] + " == " + target);
+                    } else if (n[i] - n[j] - n[k] == target) {
+                        System.out.println(n[i] + " - " + n[j] + " - " + n[k] + " == " + target);
+                    } else if (n[j] - n[i] - n[k] == target) {
+                        System.out.println(n[j] + " - " + n[i] + " - " + n[k] + " == " + target);
+
                     }
                 }
             }
